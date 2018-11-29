@@ -1,0 +1,33 @@
+lesson plan
+
+function multiply(a, b){
+    return a * b;
+}
+function square(a){
+    return multiply(a, a)
+}
+function printSquare(a){
+    result = square(a)
+    console.log(result)
+}
+
+
+printSquare(4)
+
+Into the callstack:
+printSquare(4)
+which brings in square(a)
+which brings in multiply(a,a)
+
+multiply will return, so that's out of the callstack, go back to square
+square can now return, so that's out of the calsltack, go back to printSquare
+printSquare now brings in console.log
+That returns
+Now printSquare is done
+Out of the callstack
+
+function foo(bar){
+    foo(bar)
+}
+
+
